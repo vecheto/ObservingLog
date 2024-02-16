@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observing Log</title>
+</head>
+<body>
+    <h1><center>Observing Log</center></h1>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <label for="textInput">Enter you Message:</label><br>
+        <!-- Usa un textarea en lugar de un input type="text" -->
+        <textarea id="textInput" name="textInput" rows="6" cols="120"></textarea><br><br>
+        <label for="imageInput">Upload an Image (Optional):</label><br>
+        <input type="file" id="imageInput" name="imageInput"><br><br>
+        <input type="submit" value="Send">
+    </form>
+    <div class="button-container">
+        <button onclick="window.location.href='/data';">Ver el log</button>
+        <button onclick="window.location.href='/tutorial';">Tutorial</button>
+    </div>
+</body>
+</html>
+

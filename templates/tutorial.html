@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observing Log Tutorial</title>
+    <style>
+        table {
+        border-collapse: separate;
+        width: 100%;
+        }
+        th, td {
+        padding: 15px; 
+        border: 2px solid black;
+        }
+        th:first-child,
+        td:first-child {
+        width: 10%;
+        }
+        th:last-child,
+        td:last-child {
+        width: 80%;
+        }
+    </style>
+</head>
+<body>
+    {% set day = data %}
+    <h1><center>Observing Log Tutorial</center></h1>
+    <p>Welcolme! If you are observing please follow this recomendations to write a informative Log of
+        Observations. To write a new mesagge you must write your text in the index page (/index.html)
+        uploading an image is optional. The hour and day are saved automatically in UTC.
+        </p>
+
+    <ol>
+        <li>Write a mesagge when you start your observing night.  <b>Example:</b> "Starting observations"</li>
+        <li>When the calibrations are taken, write another mesagge. <b>Example:</b>"Calibrations done,
+            without problems"   
+        <li>For every target, write a mesagge with the name of the target, filter, exposure time and 
+            every information that you consider relevant for a posterior data reducer.
+        </li>
+        <li>At least once per night, post a picture of the climate conditions.</li>
+        <li>If you have technical issues or bad weather, post a picture.</li>
+        <li>At the end of the night or if you have to leave the observation, post a message</li>
+        <li><b>Remember to save the HTML at the end of the observation or the Log will be erased</b> 
+        do not delete the folder downloaded automatically with your browser</li>
+        <li><b>To start a new log, just delete "data.csv" and static directory.</b></li>
+        <li>If you need to delete a mesagge, delete the row in "data.csv"</li>
+      </ol> 
+
+    <div class="button-container">
+        <button onclick="window.location.href='/';">Volver al Inicio</button>
+        <button onclick="window.location.href='/data';">Ver el Log</button>
+    </div>
+       
+</html>
+
