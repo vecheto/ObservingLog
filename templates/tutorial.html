@@ -36,7 +36,9 @@
     </ol>
 
     <div class="button-container">
-        <button onclick="window.location.href='/';">Volver al Inicio</button>
+        <button type="submit" value='Home' onclick="window.location.href='/';">
+        <img src="{{ url_for('static',filename='assets/home.png') }}" alt="home"  height="24" />
+      </button>
         <button onclick="window.location.href='/data';">Ver el Log</button>
     </div>
 

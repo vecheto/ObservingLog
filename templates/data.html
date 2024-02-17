@@ -15,27 +15,31 @@
     <h1>
         <center>Observing Log, {{ day[0][0] }} Night</center>
     </h1>
-<button type="submit" value='Print' onclick='handlePrint()'>
-        <img src="{{ url_for('static',filename='assets/printer.png') }}" alt="print"  height="24" />
-      </button>
+    <button type="submit" value='Print' onclick='handlePrint()'>
+        <img src="{{ url_for('static',filename='assets/printer.png') }}" alt="print" height="24" />
+    </button>
 
-       <script type="text/javascript">
-         const handlePrint = () => {
+    <script type="text/javascript">
+        const handlePrint = () => {
             var actContents = document.body.innerHTML;
             document.body.innerHTML = actContents;
             window.print();
-         }
-      </script>
+        }
+    </script>
     <table>
         <tr>
             <th>Time (UTC)</th>
             <th>Message</th>
+            <th>Image</th>
         </tr>
         {% for row in data %}
         <tr>{% if row [2] or row [3] %}
             <td width="20%">{{ row[1] }}</td>
-            <td width="80%">
+            <td width="40%">
                 <div style="white-space: pre-wrap;">{{ row[2] }}</div>
+
+            </td>
+            <td width="40%">
                 {% if row[3] %}
                 <center><img src="{{ row[3] }}" class="img" alt="" height="200"></center>
                 {% endif %}
@@ -45,11 +49,20 @@
         {% endfor %}
     </table>
     <div class="button-container">
-        <button onclick="window.location.href='/';">Volver al Inicio</button>
+        <button type="submit" value='Home' onclick="window.location.href='/';">
+            <img src="{{ url_for('static',filename='assets/home.png') }}" alt="home" height="24" />
+        </button>
+        {# <button onclick="window.location.href='/';">Volver al Inicio</button> #}
         <button onclick="window.location.href='/tutorial';">Tutorial</button>
     </div>
-<br><br><br>
-<footer>
-<a href="https://www.flaticon.com/free-icons/print" title="print icons">Print icons created by Freepik - Flaticon</a>
-</footer>
+    <br><br><br>
+    <footer>
+        <a href="https://www.flaticon.com/free-icons/print" title="print icons">Print icons created by Freepik -
+            Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/homepage" title="homepage icons">Homepage icons created by Aldo
+            Cervantes - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/send" title="send icons">Send icons created by Becris -
+            Flaticon</a>
+    </footer>
+
 </html>
