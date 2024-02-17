@@ -42,6 +42,8 @@ def upload():
 def data():
     with open('data.csv', 'r') as csvfile:
         data1 = [row for row in csv.reader(csvfile)]
+        if data1 is None:
+            save_image_and_data(None, None)
     return render_template('data.html', data=data1)
 
 @app.route('/tutorial')
