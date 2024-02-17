@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
     <title>Observing Log</title>
 </head>
+
 <body>
-    <h1><center>Observing Log</center></h1>
+    <h1>
+        <center>Observing Log</center>
+    </h1>
     <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
         <label for="textInput">Enter you Message:</label><br>
         <!-- Usa un textarea en lugar de un input type="text" -->
@@ -21,5 +25,5 @@
         <button onclick="window.location.href='/tutorial';">Tutorial</button>
     </div>
 </body>
-</html>
 
+</html>

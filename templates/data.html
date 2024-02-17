@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
     <title>Observing Log</title>
-   
+
 </head>
+
 <body>
-    
+
     {% set day = data %}
-    <h1><center>Observing Log, {{ day[0][0] }} Night</center></h1>
+    <h1>
+        <center>Observing Log, {{ day[0][0] }} Night</center>
+    </h1>
+<button type="submit" value='Print' onclick='handlePrint()'>
+        <img src="{{ url_for('static',filename='assets/printer.png') }}" alt="print"  height="24" />
+      </button>
+
+       <script type="text/javascript">
+         const handlePrint = () => {
+            var actContents = document.body.innerHTML;
+            document.body.innerHTML = actContents;
+            window.print();
+         }
+      </script>
     <table>
         <tr>
             <th>Time (UTC)</th>
@@ -24,7 +39,7 @@
                 {% if row[3] %}
                 <center><img src="{{ row[3] }}" class="img" alt="" height="200"></center>
                 {% endif %}
-            </td>            
+            </td>
             {% endif %}
         </tr>
         {% endfor %}
@@ -33,6 +48,8 @@
         <button onclick="window.location.href='/';">Volver al Inicio</button>
         <button onclick="window.location.href='/tutorial';">Tutorial</button>
     </div>
-       
+<br><br><br>
+<footer>
+<a href="https://www.flaticon.com/free-icons/print" title="print icons">Print icons created by Freepik - Flaticon</a>
+</footer>
 </html>
-
