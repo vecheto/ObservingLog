@@ -3,27 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/data.css') }}">
     <title>Observing Log</title>
-    <style>
-        table {
-        border-collapse: separate;
-        width: 100%;
-        }
-        th, td {
-        padding: 15px; 
-        border: 2px solid black;
-        }
-        th:first-child,
-        td:first-child {
-        width: 10%;
-        }
-        th:last-child,
-        td:last-child {
-        width: 80%;
-        }
-    </style>
+   
 </head>
 <body>
+    
     {% set day = data %}
     <h1><center>Observing Log, {{ day[0][0] }} Night</center></h1>
     <table>
@@ -37,7 +22,7 @@
             <td width="80%">
                 <div style="white-space: pre-wrap;">{{ row[2] }}</div>
                 {% if row[3] %}
-                <center><img src="{{ row[3] }}" width="700"></center>
+                <center><img src="{{ row[3] }}" class="img" alt="" height="200"></center>
                 {% endif %}
             </td>            
             {% endif %}

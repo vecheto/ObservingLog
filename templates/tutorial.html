@@ -3,25 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/tutorial.css') }}">
     <title>Observing Log Tutorial</title>
-    <style>
-        table {
-        border-collapse: separate;
-        width: 100%;
-        }
-        th, td {
-        padding: 15px; 
-        border: 2px solid black;
-        }
-        th:first-child,
-        td:first-child {
-        width: 10%;
-        }
-        th:last-child,
-        td:last-child {
-        width: 80%;
-        }
-    </style>
+   
 </head>
 <body>
     {% set day = data %}

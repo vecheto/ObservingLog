@@ -1,0 +1,35 @@
+table {
+    border-collapse: separate;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+    border: 2px solid black;
+}
+
+th:first-child,
+td:first-child {
+    width: 10%;
+}
+
+th:last-child,
+td:last-child {
+    width: 80%;
+}
+
+.img:hover {
+    color: #424242;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    opacity: 1;
+    transform: scale(2.0);
+    -ms-transform: scale(2.0);
+    /* IE 9 */
+    -webkit-transform: scale(2.0);
+    /* Safari and Chrome */
+
+}

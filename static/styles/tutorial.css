@@ -1,0 +1,16 @@
+table {
+    border-collapse: separate;
+    width: 100%;
+    }
+    th, td {
+    padding: 15px; 
+    border: 2px solid black;
+    }
+    th:first-child,
+    td:first-child {
+    width: 10%;
+    }
+    th:last-child,
+    td:last-child {
+    width: 80%;
+    }

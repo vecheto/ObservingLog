@@ -6,7 +6,7 @@ from weasyprint import HTML
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = 'static'
+UPLOAD_FOLDER = 'static/img'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def save_image_and_data(image, text):
