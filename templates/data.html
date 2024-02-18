@@ -30,18 +30,14 @@
         <tr>
             <th>Time (UTC)</th>
             <th>Message</th>
-            <th>Image</th>
         </tr>
         {% for row in data %}
         <tr>{% if row [2] or row [3] %}
             <td width="20%">{{ row[1] }}</td>
-            <td width="40%">
+            <td width="80%">
                 <div style="white-space: pre-wrap;">{{ row[2] }}</div>
-
-            </td>
-            <td width="40%">
                 {% if row[3] %}
-                <center><img src="{{ row[3] }}" class="img" alt="" height="200"></center>
+                <center><img src="{{ row[3] }}" class="img" alt="" height="500"></center>
                 {% endif %}
             </td>
             {% endif %}
